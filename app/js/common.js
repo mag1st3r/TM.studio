@@ -22,9 +22,8 @@ $(function() {
 
   $('.carousel-photos').owlCarousel({
     items:6,
-    loop: true,
     nav: true,
-    smartSpeed: 700,
+    smartSpeed: 200,
     navText: ['<i class="fas fa-arrow-circle-left"></i>','<i class="fas fa-arrow-circle-right"></i>'],
     responsive: {
       1800: {
@@ -34,13 +33,16 @@ $(function() {
         items: 8,
       },
       700: {
-        items: 4,
+        items: 5,
       },
        520: {
+        items: 3,
+      },
+      400: {
         items: 2,
       },
       320: {
-        items: 1,
+        items: 2,
       },
     }
   });

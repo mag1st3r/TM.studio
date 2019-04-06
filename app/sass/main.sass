@@ -496,10 +496,28 @@ section, header
 	justify-content: center
 
 .gallary
-	padding: 30px  0px
+	padding-top: 30px
+	padding-bottom: 40px
+
+.owl-carousel 
+	touch-action: auto
+	touch-action: none
+	touch-action: pan-x
+	touch-action: pan-left
+	touch-action: pan-right
+	touch-action: pan-y
+	touch-action: pan-up
+	touch-action: pan-down
+	touch-action: pinch-zoom
+	touch-action: manipulation
+
+
+.carousel-photos
+	padding-bottom: 40px
+
 .carousel-photos-item
 	display: flex
-	flex-direction: row
+	flex-direction: column
 
 .owl-item.active
 	display: flex
@@ -517,15 +535,68 @@ section, header
 	top: 10px
 	right: 10px
 	background-color: transparent
-.fas
+	
+
+
+.fas 
 		color: $accent
 		font-size: 30px
 		opacity: 0.5
+		&:hover
+			transition: opacity .5s ease
+			color: #dc85f7
+			opacity: 1
+
 .owl-prev
 	position: absolute
 	top: 10px
 	left: 10px
 	background-color: transparent
 
+.gallery-nav 
+	text-align: center
+
+.best-nails
+	padding: 5% 0
+	background-position: center
+
+.salon-inforamtion
+	p
+		margin: 30px 0
+.fotorama__nav
+	&-wrap
+		bottom: 15px
+		position: absolute
+		padding: 0 30px
+		width: 100%
+
+.fotorama__thumb
+	border: 4px #fff solid
+	transition: border-color .5s ease
+	&-border
+		border-color: $accent
+
+.fotorama__active
+	.fotorama__thumb
+		border-color: $accent
+
+.fotorama__nav:before
+	left: 0
+.fotorama__nav.fotorama__shadows--right:after, .fotorama__stage.fotorama__shadows--right:after
+	right: -1px
+.fotorama__arr
+	background: none
+.fotorama__arr-
+	&-next, &-prev
+		&::before
+			font-family: fontawesome
+			font-size: 32px
+	&-next
+		&::before
+			content: '\f105'
+	&-prev
+		left: 25px
+		&::before
+			content: '\f104'
 
 @import "media" // Всегда в конце
