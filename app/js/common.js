@@ -47,10 +47,36 @@ $(function() {
     }
   });
 
-});
-
 $('.lightzoom').lightzoom({
   speed: 400, 
   viewTitle: true,
   isWindowClickClosing: true
 });
+  //E-mail Ajax Send
+$(".call-back").submit(function() { //Change
+  var th = $(this);
+  $.ajax({
+    type: "POST",
+    url: "mail.php", //Change
+    data: th.serialize()
+  }).done(function() {
+    alert("Thank you!");
+    setTimeout(function() {
+      // Done Functions
+      th.trigger("reset");
+    }, 1000);
+  });
+  return false;
+});
+  $('.reviews').owlCarousel({
+    loop: true,
+    items: 1,
+    smartSpeed: 700,
+    nav: false,
+    autoHeight: true
+  });
+});
+
+
+
+
