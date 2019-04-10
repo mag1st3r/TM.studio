@@ -20,6 +20,20 @@ $(function() {
       $('.hamburger').removeClass('is-active');
     });
 
+    $("#my-menu, #footer-mmenu").on("click","a", function (event) {
+    event.preventDefault();
+    var id  = $(this).attr('href'), 
+        top = $(id).offset().top;
+    setTimeout(function() {
+     $('body,html').animate({scrollTop: top}, 1500);
+    }, 1000);
+    });
+
+   $('.button').on('click', function(e){
+  $('html,body').stop().animate({ scrollTop: $('#callback-s').offset().top }, 1500);
+  e.preventDefault();
+});
+
   $('.carousel-photos').owlCarousel({
     items:6,
     nav: true,
@@ -52,6 +66,17 @@ $('.lightzoom').lightzoom({
   viewTitle: true,
   isWindowClickClosing: true
 });
+
+$('.top').click(function() {
+    $('html, body').stop().animate({scrollTop: 0}, 'slow', 'swing');
+  });
+  $(window).scroll(function() {
+    if ($(this).scrollTop() > $(window).height()) {
+      $('.top').addClass("active");
+    } else {
+      $('.top').removeClass("active");
+    };
+  });
   //E-mail Ajax Send
 $(".call-back").submit(function() { //Change
   var th = $(this);
@@ -75,7 +100,11 @@ $(".call-back").submit(function() { //Change
     nav: false,
     autoHeight: true
   });
+
 });
+$(window).on('load', function() {
+  $('.preloader').delay(1000).fadeOut('clow');
+})
 
 
 

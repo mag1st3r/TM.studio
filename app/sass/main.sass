@@ -37,10 +37,60 @@ body textarea:focus:required:invalid
 body input:required:valid,
 body textarea:required:valid
 	color: #666
+.preloader
+	position: fixed
+	top: 0
+	left: 0
+	bottom: 0
+	right: 0
+	background-color: #30225d
+	z-index: 100
+@mixin opacity($opacity)
+	opacity: $opacity / 100
+	filter: alpha(opacity=$opacity)
+.pulse
+	position: relative
+	left: 50%
+	top: 50vh
+	margin:
+		left: -40px
+		top: -40px
+	&:before, &:after
+		content: ''
+		border: 5px solid $accent
+		width: 80px
+		height: 80px
+		border-radius: 500px
+		position: absolute
+	&:before
+		animation: pulse-outer .8s ease-in infinite
+	&:after
+		animation: pulse-inner .8s linear infinite
+
+@keyframes pulse-outer
+	0%
+		@include opacity(100)
+	50%
+		@include opacity(50)
+	100%
+		@include opacity(0)
+
+@keyframes pulse-inner
+	0%
+		transform: scale(0)
+		@include opacity(0)
+	100%
+		transform: scale(1)
+		@include opacity(100)
+
 
 html, body
 	height: 100%
 
+html.mm-opened
+	overflow-y: scroll
+.mm-panels > .mm-panel.mm-hasnavbar
+	right: -18px
 body
 	font-size: 16px
 	min-width: 320px
@@ -531,6 +581,10 @@ section, header
  img
  	max-height: 100%
 
+#lz-close
+	top: 2%
+	right: 33%
+
 .owl-stage
 	position: relative
 
@@ -545,11 +599,15 @@ section, header
 .fas, .far
 		color: $accent
 		font-size: 30px
-		opacity: 0.5
-		&:hover
+		&:hover 
 			transition: opacity .5s ease
 			color: #dc85f7
 			opacity: 1
+
+.owl-prev, .owl-next > .fas, .far
+	opacity: 0.7
+	&:hover
+		opacity: 1
 
 .owl-prev
 	position: absolute
@@ -852,5 +910,29 @@ footer
 		&:hover
 			opacity: 1
 
+.top
+	position: fixed
+	bottom: 25px
+	right: -100px
+	background-color: #000
+	z-index: 12
+	border-radius: 10em
+	font-size: 26px
+	width: 50px
+	height: 50px
+	text-align: center
+	line-height: 50px
+	cursor: pointer
+	transition: all .3s ease
+	opacity: .5
+	i
+		line-height: 0
+	&:hover
+		color: #fff
+		background-color: $accent
+		opacity: 0.8
+	&.active
+		right: 25px
+	
 
 @import "media" // Всегда в конце

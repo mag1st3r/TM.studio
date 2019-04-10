@@ -10,7 +10,8 @@
 
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-
+	<meta name="viewport" content="width=device-width, initial-scale=0.85, maximum-scale=0.85, user-scalable=0" />
+	<meta name="format-detection" content="telephone=no">
 	<meta property="og:image" content="path/to/image.jpg">
 	<link rel="shortcut icon" href="img/favicon/apple-touch-icon-114x114.png" type="image/x-icon">
 	<link rel="apple-touch-icon" href="img/favicon/apple-touch-icon.png">
@@ -29,6 +30,7 @@
 </head>
 
 <body class='isHome'>
+	<div class="preloader"><div class="pulse"></div></div>
 
 		<div id="my-page">
 			
@@ -59,12 +61,11 @@
 						<nav id="my-menu">
 							<ul>
 								<li><a href="#">Головна</a></li>
-								<li class='active'><a href="#">Про нас</a></li>
-								<li><a href="#">Переваги</a></li>
-								<li><a href="#">Команда</a></li>
-								<li><a href="#">Портфолио</a></li>
-								<li><a href="#">Прайс-лист</a></li>
-								<li><a href="#">Відгуки</a></li>
+								<li ><a href="#aboutUs">Про нас</a></li>
+								<li><a href="#advantag">Переваги</a></li>
+								<li><a href="#Our-gallery">Наші роботи</a></li>
+								<li><a href="#photo-studio">Наш салон</a></li>
+								<li><a href="#reviews-s">Відгуки</a></li>
 							</ul>
 						</nav>
 					</div>
@@ -85,7 +86,7 @@
 											</div>
 
 										<p><strong>TM STUDIO</strong> – це  студія нігтьового сервісу преміум-классу.  Майстри салону дарують відвідувачам впевненість в собі і індивідуальний стиль.</p>
-										<a href="#" class="button">Про Нас</a>
+										<a href="#callback-s" class="button">Записатися</a>
 										</div>
 
 										</div>
@@ -97,8 +98,8 @@
 						<div class="header-social">
 							<nav class="social">
 								<ul>
-									<li><a href="#"><i class='fab fa-facebook-f'></i></a></li>
-									<li><a href="#"><i class="fab fa-instagram"></i></a></li>
+									<li><a href="https://www.facebook.com/tanya.mironenko.587"><i class='fab fa-facebook-f'></i></a></li>
+									<li><a href="https://www.instagram.com/tm.nails_studio/"><i class="fab fa-instagram"></i></a></li>
 									<li><a href="#"><i class="fab fa-telegram-plane"></i></a></li>
 								</ul>
 							</nav>
@@ -125,7 +126,7 @@
 
 		<div id="my-content">
 			
-			<section class='about enverse'>
+			<section class='about enverse' id='aboutUs'>
 				
 				<div class="container">
 					
@@ -143,7 +144,7 @@
 
 						</div>
 						<div class="col-md-7">
-							<div class="about-text">
+							<div  class="about-text">
 								
 								<h2 class="h2">
 									
@@ -156,7 +157,7 @@
 								<p>Voluptate enim aliqua sit irure eiusmod et anim laborum sunt consequat ex sunt excepteur irure ea. Dolor dolore in et officia ad dolor exercitation laborum enim exercitation esse deserunt ut fugiat occaecat in id. Lorem ipsum enim ullamco minim duis duis ut est nisi officia aute et fugiat officia ex in irure enim deserunt consequat.</p>
 							</div>
 
-							<a href="#" class="button">Запис</a>
+							<a class="button" href="#callback-s" >Записатися</a>
 						</div>
 
 					</div>
@@ -164,12 +165,12 @@
 				</div>
 
 			</section>
-			<section class="section-overley" style='background-image: url(img/bg-2.jpg);'>
+			<section class="section-overley"  style='background-image: url(img/bg-2.jpg);'>
 				<div class="advantages">
 					<div class="container">
 						
 						<div class="row">
-							<div class="intro-center">
+							<div class="intro-center" id='advantag'>
 								
 								<h2 class="h2">Наші 
 									<span>переваги</span></h2>
@@ -253,10 +254,10 @@
 				
 				<div class="container">
 					<div class="row">
-						<div class="col-12 intro-gallery" >
+						<div class="col-12 intro-gallery" id='Our-gallery' >
 				
 							<h2 class="h2">Наші <span>роботи</span></h2>
-							<a href="#" class='instagram-content'>Побачити більше робіт в INSAGRAM</a>
+							<a href="https://www.instagram.com/tm.nails_studio/" class='instagram-content'>Побачити більше робіт в INSAGRAM</a>
 						</div>
 					 </div>
 
@@ -277,7 +278,7 @@
 					</div>
 					<div class="owl-item owl-height carousel-photos-item">
 						<a href="img/gallery/4.jpg" class='lightzoom' ><img src="img/gallery/thumbs/4.jpg" alt="photo-nails" >	</a>		
-						<a href="img/gallery/24.jpg" class='lightzoom' ><img src="img/gallery/thumbs/24.jpg" alt="photo-nails" >	</a>		
+						<a href="img/gallery/24.jpeg" class='lightzoom' ><img src="img/gallery/thumbs/24.jpg" alt="photo-nails" >	</a>		
 					</div>
 					<div class="owl-item owl-height carousel-photos-item">
 						<a href="img/gallery/5.jpg" class='lightzoom' ><img src="img/gallery/thumbs/5.jpg" alt="photo-nails" >	</a>		
@@ -315,15 +316,15 @@
 				</div>
 				<div class="gallery-nav">
 
-					<a href="#" class="button">Запис</a>		
+					<a class="button" href="#callback-s" >Записатися</a>		
 				
 				</div>
 
 			</section>
-			<section class="best-nails section-overley" style='background-image: url(img/photos/foto-19.jpg);'>
+			<section class="best-nails section-overley" id='photo-studio' style='background-image: url(img/photos/foto-19.jpg);'>
 				<div class="container">
 					<div class="row">
-						<div class="col-md-5 salon-inforamtion">
+						<div class="col-md-5 salon-inforamtion" id='photo-studio'>
 							<h2 class="h2">Кращий <span> Салон</span></h2>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eos dolorem repellendus aliquam doloribus eaque in inventore facilis quis voluptate illum, quam labore molestiae. Ipsa quod perspiciatis maiores assumenda voluptates provident!</p>
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In sequi maxime dolorum, quo ratione omnis commodi facilis obcaecati nam, dolor esse ducimus beatae expedita assumenda nostrum excepturi quam. Beatae, inventore!</p>
@@ -357,15 +358,15 @@
 						
 								<div class="container">
 									<div class="row">
-										<div class="col-md-12 wrapper-form">
+										<div class="col-md-12 wrapper-form" id='callback-s'>
 											
 												<div class="call-back-logo">
 													<a href="#"><img src="img/logo_png_2.png" alt="ТМ студія маникюрного сервісу" ></a>
 												</div>
 												
 											<div class="success "><span>Дякую за заявку</span></div>
-												<h2 class="h2">Залишіть <span> заявку</span></h2>
-												<p>Залиште заявку і ми вам перезвоним через 15 хвилин</p>
+												<h2 class="h2">Зворотній <span> звязок</span></h2>
+												<p>Залишіть свої данні і ми вам перезвоним через 15 хвилин</p>
 											<form  id='callback-form' class="call-back"   name='callback-form' >
 													<div class="input-wrapper">
 															<!-- Hidden Required Fields -->
@@ -387,7 +388,7 @@
 					</div>
 				</div>
 			</section>
-			<section class="review enverse">
+			<section class="review enverse" id='reviews-s'>
 				
 				<div class="container">
 					
@@ -466,14 +467,14 @@
     	 							<div class="col-lg-3 col-sm-6">
     	 								
     	 									<div class="footer-column">
-    	 										<nav class="footer-menu">
+    	 										<nav id='footer-mmenu' class="footer-menu">
 	    	 											<ul>
 																<li><a href="#">Головна</a></li>
-																<li class='active'><a href="#">Про нас</a></li>
-																<li><a href="#">Переваги</a></li>
-																<li><a href="#">Наші роботи</a></li>
-																<li><a href="#">Наш салон</a></li>
-																<li><a href="#">Відгуки</a></li>
+																<li ><a href="#aboutUs">Про нас</a></li>
+																<li><a href="#advantag">Переваги</a></li>
+																<li><a href="#Our-gallery">Наші роботи</a></li>
+																<li><a href="#photo-studio">Наш салон</a></li>
+																<li><a href="#reviews-s">Відгуки</a></li>
 															</ul>
     	 										</nav>
 
@@ -505,7 +506,7 @@
     	 </div>
 
 		</div>
-
+		<div class="top" title="Наверх"><i class="fa fa-angle-double-up"></i></div>
 
 
 	<script src="js/scripts.min.js"></script>
