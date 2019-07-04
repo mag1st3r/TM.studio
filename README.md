@@ -1,1 +1,1 @@
-# TM.studio real-time website http://nails-studio.zzz.com.ua/
+https://mag1st3r.github.io/TM.studio/
